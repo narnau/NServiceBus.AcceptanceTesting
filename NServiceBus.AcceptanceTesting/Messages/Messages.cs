@@ -7,11 +7,18 @@
     using System.Threading.Tasks;
     using NServiceBus;
 
-    public class Messages
+    public class ProcessCommand : IEvent
     {
-        public class Command1 : IEvent
-        {
-            
-        }
+        public string CommandName { get; set; }
+    }
+
+    public class AggregateOneProcessed : IEvent
+    {
+        public string EventName { get; set; }
+    }
+
+    public class AggregateTwoProcessed : IEvent
+    {
+        public string EventName { get; set; }
     }
 }
