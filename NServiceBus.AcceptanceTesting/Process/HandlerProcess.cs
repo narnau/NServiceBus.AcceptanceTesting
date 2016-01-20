@@ -11,8 +11,9 @@ namespace Process
 
     public class HandlerProcess : IHandleMessages<ProcessCommand>, IHandleMessages<AggregateOneProcessed>
     {
-        private AggregateOne aggregateOne;
-        private AggregateTwo aggregateTwo;
+        private readonly AggregateOne aggregateOne;
+        private readonly AggregateTwo aggregateTwo;
+
         public IBus Bus { get; set; }
 
         public HandlerProcess()
