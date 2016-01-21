@@ -1,5 +1,4 @@
-﻿namespace IntegrationTests
-
+﻿namespace ScenarioTests.Infrastructure
 {
     using System;
     using System.Linq;
