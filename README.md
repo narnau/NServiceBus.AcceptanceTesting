@@ -3,9 +3,9 @@
 
 ## Scenario
 
-In this scenario, the PROCESS endPoint receives the command "RegisterOrder".
+In this scenario, the SALES endPoint receives the command "RegisterOrder".
 The endPoint processes it and send another command called "OtherOrder". It is received by
-the PROCESS endPoint itself. Then, this endPoint publishes an event called "OrderAccepted"
+the SALES endPoint itself. Then, this endPoint publishes an event called "OrderAccepted"
 that is received by the same endPoint.
 
 This scenario is useful to perform integration tests in a scenario where some aggregates
@@ -14,7 +14,7 @@ are communicated via servicebus in the same process.
                                    _  _ _ _ _ _ _ _ _ _ _ _
                                   |                        |
                      |---------------------|--OtherOrder--->
-RegisterOrder -----> |  PROCESS endPoint   |  
+RegisterOrder -----> |  SALES   endPoint   |  
                      |---------------------|--OrderAccepted -->
                                     | _ _ _ _ _ _ _ _ _ _ _ _ |
 ```
